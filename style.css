@@ -1,8 +1,9 @@
 * {
   font-family: Roboto;
-  font-size: 13px;
+  font-size: 12px;
   min-height: 0;
-  color: #e9ecef;
+  padding: 0;
+  margin: 0;
 }
 
 window#waybar {
@@ -10,33 +11,26 @@ window#waybar {
 }
 
 #workspaces {
-  margin-top: 2px;
-  margin-bottom: 2px;
-  margin-right: 10px;
-  margin-left: 25px;
 }
 
 #workspaces button {
-  border-radius: 15px;
-  margin-right: 10px;
-  margin-bottom: 5px;
-  padding: 0px 8px;
+  margin: 4px;
+  padding: 0 12px;
+  border-radius: 999px;
   font-weight: bolder;
   background-color: transparent;
+  border: transparent;
+  color: #ced4da;
+  box-shadow: 0.5px -0.5px 4px 0px rgba(227, 250, 252, 0.1),
+    -0.5px 0.5px 4px 0px rgba(227, 250, 252, 0.1);
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  padding: 0 18px;
-  /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
-    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
-    rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
-  background: transparent;
-  /* border: solid 2px rgba(226, 226, 226, 0.454); */
-  border-bottom: solid #96f2d7;
-
-  box-shadow: 4px -4px 5px 0px rgba(166, 30, 78, 0.628),
-    -4px 3px 4px 1px rgba(150, 242, 214, 0.651);
+  color: #e6fcf5;
+  padding: 0 16px;
+  border: none;
+  box-shadow: 1px -1px 3px 0.5px #e6f, -1px 1px 3px 0px #96f2d7;
 }
 
 #tray,
@@ -60,7 +54,7 @@ window#waybar {
 #memory,
 #temperature,
 #cpu {
-  color: #e3fafc;
+  color: grey;
   margin: 0.77px 0px;
 
   /* box-shadow: 7px 5px 4px 1px rgba(211, 249, 216, 0.522),
