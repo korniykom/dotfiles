@@ -30,7 +30,7 @@
       "",
       ""
     ],
-    "format-charging": "{capacity}% ",
+    "format-charging": "<span color='#a61e4d'>{capacity}%</span>",
     "interval": 30,
     "states": {
       "warning": 25,
