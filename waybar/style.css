@@ -21,16 +21,14 @@ window#waybar {
   background-color: transparent;
   border: transparent;
   color: #ced4da;
-  box-shadow: 0.5px -0.5px 4px 0px rgba(227, 250, 252, 0.1),
-    -0.5px 0.5px 4px 0px rgba(227, 250, 252, 0.1);
 }
 
 #workspaces button.active,
 #workspaces button.focused {
   color: #e6fcf5;
   padding: 0 16px;
-  border: none;
-  box-shadow: 1px -1px 3px 0.5px #e6f, -1px 1px 3px 0px #96f2d7;
+  border-bottom: 0.4px solid #63e6be;
+
 }
 
 #tray,
