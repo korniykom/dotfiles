@@ -12,8 +12,8 @@ window {
 #entry:selected {
   background: linear-gradient(
     20deg,
-    rgba(150, 242, 215, 1) 62%,
-    rgba(194, 37, 92, 1) 99%
+    rgba(150, 242, 215, 1) 40%,
+    rgba(33, 37, 41, 0.9) 79%
   );
   color: #212529;
 }
