@@ -20,12 +20,12 @@ window#waybar {
   font-weight: bolder;
   background-color: transparent;
   border: transparent;
-  color: #ced4da;
+  color: #868e96;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  color: #e6fcf5;
+  color: #adb5bd;
   padding: 0 16px;
   border-bottom: 0.4px solid #63e6be;
 
@@ -52,7 +52,7 @@ window#waybar {
 #memory,
 #temperature,
 #cpu {
-  color: grey;
+  color: #868e96;
   margin: 0.77px 0px;
 
   /* box-shadow: 7px 5px 4px 1px rgba(211, 249, 216, 0.522),
@@ -63,7 +63,7 @@ window#waybar {
 #battery,
 #network,
 #pulseaudio {
-  color: #fff0f6;
+  color: #868e96;
   margin: 0.77px 0px;
   /* box-shadow: 2px 3px 4.2px 1px #fff; */
   border-radius: 999px;
