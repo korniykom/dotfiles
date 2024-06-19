@@ -1,4 +1,5 @@
 #!/bin/bash
+pacman -Syu waybar wofi thunar kitty hyprpaper hyprlock brightnessctl pamixer ttf-font-awesome ttf-roboto
 cp ./hyprland/hyprland.conf /home/max/.config/hypr
 cp ./hyprlock/hyprlock.conf /home/max/.config/hypr
 cp -r ./kitty /home/max/.config/
