@@ -6,6 +6,7 @@
   "margin-top": 0,
   "modules-left": [
     "cpu",
+    "temperature",
     "memory"
   ],
   "modules-center": [
@@ -53,12 +54,12 @@
   },
   "cpu": {
     "interval": 1,
-    "format": "CPU:&#8239;{usage}% ",
+    "format": "CPU:<span color='grey' >&#8239;{usage}%</span>",
     "tooltip": false
   },
   "memory": {
     "interval": 30,
-    "format": "RAM: {used} GiB",
+    "format": "RAM: <span color='grey'> {used} GiB</span>",
     "max-length": 15,
     "tooltip": false,
     "warning": 70,
@@ -105,6 +106,6 @@
   },
   "temperature": {
     "interval": 5,
-    "format": "{temperatureC}°C  "
+    "format": "<span color='grey'>{temperatureC}°C  </span>"
   }
 }
