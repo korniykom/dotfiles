@@ -5,7 +5,7 @@ cp -r ./kitty /home/max/.config/
 cp -r ./wofi /home/max/.config/
 cp ./hyprpaper/hyprpaper.conf /home/max/.config/hypr
 cp ./hyprpaper/wallpaper.png /home/max/.config/hypr
-
+cp ./hyprlock/hyprlock.png /home/max/.config/hypr/
 
 cp ./waybar/style.css ./waybar/config /etc/xdg/waybar
 cp ./waybar/config /etc/xdg/waybar
