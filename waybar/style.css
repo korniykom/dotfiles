@@ -1,13 +1,14 @@
 * {
   font-family: Roboto;
-  font-size: 12px;
+  font-size: 10px;
   min-height: 0;
   padding: 0;
   margin: 0;
+  color: #000;
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0);
 }
 
 #workspaces {
@@ -20,12 +21,10 @@ window#waybar {
   font-weight: bolder;
   background-color: transparent;
   border: transparent;
-  color: grey;
 }
 
 #workspaces button.active,
 #workspaces button.focused {
-  color: #fff;
   padding: 0 16px;
   /* border-bottom: 0.4px solid #fff; */
 }
@@ -51,20 +50,11 @@ window#waybar {
 #memory,
 #temperature,
 #cpu {
-  color: #fff;
   margin: 0.77px 0px;
-
-  /* box-shadow: 7px 5px 4px 1px rgba(211, 249, 216, 0.522),
-    -10px 0px 5px 1px rgba(230, 153, 247, 0.498); */
-  border-radius: 999px;
 }
 #clock,
 #battery,
 #network,
 #pulseaudio {
-  color: #000;
   margin: 0.77px 0px;
-  /* box-shadow: 2px 3px 4.2px 1px #fff; */
-
-  border-radius: 999px;
 }
