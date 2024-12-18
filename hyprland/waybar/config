@@ -1,0 +1,120 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 10,
+  "margin-bottom": 0,
+  "margin-top": 0,
+  "modules-left": [
+   
+  ],
+  "modules-center": [],
+  "modules-right": [
+    "network",
+      "temperature",
+    "battery",
+    "clock"
+   
+  ],
+  "battery": {
+    "format": "<span >{capacity}% {icon}  <span color='#4e5173'>{power:0.2f} W</span></span>",
+    "format-alt": "<span >{time} {icon}</span>",
+    "format-icons": [
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "format-charging": "<span >{capacity}%</span>",
+    "interval": 30,
+    "states": {
+      "warning": 25,
+      "critical": 10
+    },
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "sort-by-name": true,
+    "on-click": "activate"
+  },
+  "hyprland/window": {
+    "max-length": 200,
+    "separate-outputs": true
+  },
+  "tray": {
+    "icon-size": 16,
+    "spacing": 16
+  },
+  "clock": {
+    "locale": "C",
+    "format": "<span >{:%I:%M }</span>",
+    "format-alt": "<span >{:%a %b %d}</span>"
+  },
+  "cpu": {
+    "interval": 1,
+    "format": "CPU:<span >&#8239;{usage}%</span>",
+    "tooltip": true
+  },
+  "memory": {
+    "interval": 30,
+    "format": "RAM: <span > {used} GiB</span>",
+    "max-length": 15,
+    "tooltip": false,
+    "warning": 70,
+    "critical": 90,
+    "format-alt": " {total} GiB"
+  },
+  // "network": {
+  //   "interval": 1,
+  //   "format-wifi": "<span ></span> <span color='gray'>{essid}</span> <span > {signaldBm} dB </span> <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+  //   "format-ethernet": " <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+  //   "format-linked": " {ipaddr}",
+  //   "format-disconnected": "Disconnected",
+  //   "format-disabled": "DISABLED",
+  //   "tooltip": false,
+  //   "max-length": 30,
+  //   "min-length": 1
+  // },
+   "network": {
+    "interval": 1,
+    "format-wifi": "<span ></span> <span color='#4e5173ff'>{essid}</span> <span > {signaldBm} dB </span> ",
+    "format-ethernet": " <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+    "format-linked": " {ipaddr}",
+    "format-disconnected": "Disconnected",
+    "format-disabled": "DISABLED",
+    "tooltip": false,
+    "max-length": 30,
+    "min-length": 1
+  },
+  "pulseaudio": {
+    "format": "<span color='#4e5173'>{icon} {volume}%</span>",
+    "format-bluetooth": "{icon}  <span style=\"italic\">{volume}%</span>",
+    "format-bluetooth-muted": "  {volume}%",
+    "format-muted": "<span color='#fff '> {volume}%</span>",
+    "format-source": " {volume}%",
+    "format-source-muted": "",
+    "tooltip": true,
+    "tooltip-format": "{desc}",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click-right": "pavucontrol",
+    "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > /home/babkock/.wob.sock",
+    "on-scroll-up": "pactl set-sink-volume @DEFAULT_SINK@ +2% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > /home/babkock/.wob.sock",
+    "on-scroll-down": "pactl set-sink-volume @DEFAULT_SINK@ -2% && pactl get-sink-volume @DEFAULT_SINK@ | head -n 1 | awk '{print substr($5, 1, length($5)-1)}' > /home/babkock/.wob.sock"
+  },
+  "temperature": {
+    "interval": 5,
+    "format": "<span color='#4e5173'>{temperatureC}°C  </span>"
+  }
+}

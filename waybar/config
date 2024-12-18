@@ -5,21 +5,19 @@
   "margin-bottom": 0,
   "margin-top": 0,
   "modules-left": [
-    "cpu",
-    "temperature",
-    "memory"
+   
   ],
-  "modules-center": [
-    "hyprland/workspaces"
-  ],
+  "modules-center": [],
   "modules-right": [
     "network",
+      "temperature",
     "battery",
     "clock"
+   
   ],
   "battery": {
-    "format": "<span color='#fff'>{capacity}% {icon}  <span color='grey'>{power:0.2f} W</span></span>",
-    "format-alt": "<span color='#fff'>{time} {icon}</span>",
+    "format": "<span >{capacity}% {icon}  <span color='#4e5173'>{power:0.2f} W</span></span>",
+    "format-alt": "<span >{time} {icon}</span>",
     "format-icons": [
       "",
       "",
@@ -27,7 +25,7 @@
       "",
       ""
     ],
-    "format-charging": "<span color='#fff'>{capacity}%</span>",
+    "format-charging": "<span >{capacity}%</span>",
     "interval": 30,
     "states": {
       "warning": 25,
@@ -49,27 +47,38 @@
   },
   "clock": {
     "locale": "C",
-    "format": "<span color='grey'>{:%I:%M %p}</span>",
-    "format-alt": "<span color='grey'>{:%a %b %d}</span>"
+    "format": "<span >{:%I:%M }</span>",
+    "format-alt": "<span >{:%a %b %d}</span>"
   },
   "cpu": {
     "interval": 1,
-    "format": "CPU:<span color='grey' >&#8239;{usage}%</span>",
-    "tooltip": false
+    "format": "CPU:<span >&#8239;{usage}%</span>",
+    "tooltip": true
   },
   "memory": {
     "interval": 30,
-    "format": "RAM: <span color='grey'> {used} GiB</span>",
+    "format": "RAM: <span > {used} GiB</span>",
     "max-length": 15,
     "tooltip": false,
     "warning": 70,
     "critical": 90,
     "format-alt": " {total} GiB"
   },
-  "network": {
+  // "network": {
+  //   "interval": 1,
+  //   "format-wifi": "<span ></span> <span color='gray'>{essid}</span> <span > {signaldBm} dB </span> <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+  //   "format-ethernet": " <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+  //   "format-linked": " {ipaddr}",
+  //   "format-disconnected": "Disconnected",
+  //   "format-disabled": "DISABLED",
+  //   "tooltip": false,
+  //   "max-length": 30,
+  //   "min-length": 1
+  // },
+   "network": {
     "interval": 1,
-    "format-wifi": "<span color='#fff'></span> <span color='gray'>{essid}</span> <span color='#fff'> {signaldBm} dB </span> <span color='grey'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
-    "format-ethernet": " <span color='grey'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
+    "format-wifi": "<span ></span> <span color='#4e5173ff'>{essid}</span> <span > {signaldBm} dB </span> ",
+    "format-ethernet": " <span color='#4e5173'>{bandwidthUpBits}/{bandwidthDownBits}</span>",
     "format-linked": " {ipaddr}",
     "format-disconnected": "Disconnected",
     "format-disabled": "DISABLED",
@@ -78,7 +87,7 @@
     "min-length": 1
   },
   "pulseaudio": {
-    "format": "<span color='grey'>{icon} {volume}%</span>",
+    "format": "<span color='#4e5173'>{icon} {volume}%</span>",
     "format-bluetooth": "{icon}  <span style=\"italic\">{volume}%</span>",
     "format-bluetooth-muted": "  {volume}%",
     "format-muted": "<span color='#fff '> {volume}%</span>",
@@ -106,6 +115,6 @@
   },
   "temperature": {
     "interval": 5,
-    "format": "<span color='grey'>{temperatureC}°C  </span>"
+    "format": "<span color='#4e5173'>{temperatureC}°C  </span>"
   }
 }
