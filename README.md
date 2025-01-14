@@ -1,4 +1,5 @@
-## Laptop
-![image](https://github.com/korniykom/dotfiles/assets/81708839/b73376a0-d421-4ae7-b9ad-15ba90f1a163)
+## PC
 
-![image](https://github.com/korniykom/dotfiles/assets/81708839/c556f583-596a-4237-be59-75be68b3f83e)
+![image](https://github.com/user-attachments/assets/0793ba6f-2b40-4b1b-b008-f52763a32525)
+
+![image](https://github.com/user-attachments/assets/e9b22c44-c0d1-426c-877c-f812596d4a0c)
