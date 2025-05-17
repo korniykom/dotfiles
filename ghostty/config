@@ -1,0 +1,16 @@
+# Set white text
+foreground = ffffff
+
+# Set transparent background (value between 0-1, where 0 is fully transparent)
+background = 000000
+background-opacity = 0.8
+
+# Enable background blur (makes transparency look better)
+background-blur = 20
+
+# Optional: Make the padding color match the background
+window-padding-color = background
+
+# Optional: Add some padding for aesthetics
+window-padding-x = 10
+window-padding-y = 10
