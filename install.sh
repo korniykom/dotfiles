@@ -5,7 +5,7 @@ cp ./hyprlock/hyprlock.conf /home/max/.config/hypr
 cp -r ./wofi /home/max/.config/
 cp ./hyprpaper/hyprpaper.conf /home/max/.config/hypr
 cp -r ./hyprpaper/wallpaper /home/max/.config/hypr
-cp ./ghostty/config /home/max/.config/ghostty
+cp ./ghostty/config /home/max/.config/ghostty/config
 
 cp ./waybar/style.css  /etc/xdg/waybar/style.css
 cp ./waybar/config /etc/xdg/waybar/config
