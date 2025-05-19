@@ -1,8 +1,6 @@
-# Tokyo Night theme with darker background
 background = 0f1017
 foreground = c0caf5
 
-# Color palette
 palette = 0=#15161e
 palette = 1=#f7768e
 palette = 2=#9ece6a
@@ -20,9 +18,12 @@ palette = 13=#bb9af7
 palette = 14=#7dcfff
 palette = 15=#c0caf5
 
-# Your other settings
 font-family = "Roboto Mono"
 background-opacity = 0.8
 background-blur = 20
 window-padding-x = 10
 window-padding-y = 10
+
+keybind = ctrl+plus=increase_font_size
+keybind = ctrl+minus=decrease_font_size
+keybind = ctrl+zero=reset_font_size
