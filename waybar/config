@@ -1,33 +1,105 @@
 {
-  "layer": "bottom",
-  "position": "top",
-  "height": 10,
-  "modules-left": [],
-  "modules-center": [],
-  "modules-right": [
-    "battery",
+  "layer": "top",
+  "position": "bottom",
+  "height": 43,
+  "margin-bottom": 4,
+  "margin-left": 0,
+  "margin-right": 0,
+  "spacing": 0,
+  "modules-left": [
     "clock"
   ],
+  "modules-center": [],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "network",
+    "bluetooth",
+    "battery",
+    "hyprland/language"
+  ],
   "clock": {
-    "format": "{:%a %d %b %H:%M}",
+    "format": "{:%a %d %b  %H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "format": {
+        "today": "<span background='#ffffff' foreground='#000000'><b>{}</b></span>",
+        "weekdays": "<span foreground='#888888'>{}</span>"
+      }
+    }
+  },
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 muted",
+    "format-icons": {
+      "default": [
+        "󰕿",
+        "󰖀",
+        "󰕾"
+      ]
+    },
+    "on-click": "pamixer -t",
+    "on-click-right": "pavucontrol",
+    "on-scroll-up": "pamixer -i 3",
+    "on-scroll-down": "pamixer -d 3",
+    "tooltip-format": "{desc}"
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": [
+      "󰃞",
+      "󰃟",
+      "󰃠"
+    ],
+    "on-scroll-up": "brightnessctl s +3%",
+    "on-scroll-down": "brightnessctl s 3%-",
     "tooltip": false
   },
+  "network": {
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪",
+    "tooltip-format-wifi": "{essid} ({signalStrength}%)\n{ipaddr}",
+    "tooltip-format-ethernet": "{ifname}\n{ipaddr}",
+    "tooltip-format-disconnected": "Disconnected",
+    "on-click": "ghostty -e iwctl"
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-connected": "󰂱",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
+    "tooltip-format": "{controller_alias}: {status}",
+    "tooltip-format-connected": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}",
+    "on-click": "ghostty -e bluetui"
+  },
   "battery": {
-    "format": "{capacity}% {icon}",
-    "format-alt": "{time} {icon}",
-    "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
-    ],
-    "format-charging": "{capacity}% ",
     "interval": 30,
     "states": {
       "warning": 25,
       "critical": 10
     },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip-format": "{timeTo}"
+  },
+  "hyprland/language": {
+    "format": "{short}",
     "tooltip": false
   }
 }
