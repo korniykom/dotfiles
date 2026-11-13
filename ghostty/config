@@ -24,6 +24,6 @@ background-blur = 20
 window-padding-x = 10
 window-padding-y = 10
 
-keybind = ctrl+plus=increase_font_size
-keybind = ctrl+minus=decrease_font_size
+keybind = ctrl+plus=increase_font_size:1
+keybind = ctrl+minus=decrease_font_size:1
 keybind = ctrl+zero=reset_font_size
