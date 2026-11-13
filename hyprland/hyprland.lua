@@ -68,6 +68,8 @@ hl.on("hyprland.start", function()
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
     hl.exec_cmd("hyprpaper")
+    hl.exec_cmd("hypridle")
+    hl.exec_cmd("systemctl --user start hyprpolkitagent")
 end)
 
 
@@ -271,7 +273,7 @@ hl.bind(mainMod .. " + T", hl.dsp.exec_cmd(terminal))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + A", hl.dsp.exec_cmd(menu))
 hl.bind(mainMod .. " + F", hl.dsp.exec_cmd(browser))
-hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
+hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("loginctl lock-session"))
 hl.bind(mainMod .. " + D", hl.dsp.exec_cmd("~/dualsense.sh"))
 
 -- Window management
@@ -404,4 +406,21 @@ hl.window_rule({
     name = "suppress-maximize-events",
     match = { class = ".*" },
     suppress_event = "maximize",
+})
+
+-- Float the Wi-Fi / Bluetooth managers opened from waybar.
+hl.window_rule({
+    name = "float-network-managers",
+    match = { class = "^(org.twosheds.iwgtk|io.github.kaii_lb.Overskride)$" },
+    float = true,
+    size = "720 560",
+    center = true,
+})
+
+-- Float the WireGuard popup opened from waybar (sizes itself).
+hl.window_rule({
+    name = "float-wireguard-ui",
+    match = { class = "^(local.dotfiles.WireGuard)$" },
+    float = true,
+    center = true,
 })

@@ -26,6 +26,10 @@ window#waybar {
   color: rgba(255, 255, 255, 0.85);
 }
 
+#image.wireguard {
+  padding: 0 10px;
+}
+
 #clock {
   margin-left: 6px;
 }
