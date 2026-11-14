@@ -113,8 +113,14 @@ hl.config({
         follow_mouse = 1,
         sensitivity = 0,
 
+        -- macOS-like behaviour; applies to the built-in pad and the Magic Trackpad.
         touchpad = {
             natural_scroll = true,
+            tap_to_click = true,
+            clickfinger_behavior = true,    -- 2-finger click = right, 3-finger = middle
+            disable_while_typing = true,
+            tap_and_drag = true,
+            scroll_factor = 0.5,            -- Apple pads report large scroll deltas
         },
     },
 })
